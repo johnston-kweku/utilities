@@ -32,7 +32,7 @@ def main():
         
         generate_qr_code(data, filename)
 
-        answer = input('Wanna generate another?: ').strip().lower()
+        answer = input('Wanna generate another? (y/n): ').strip().lower()
 
         if answer not in ['yes', 'yep', 'yh', 'yeah']:
             print('Goodbye')
