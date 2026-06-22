@@ -1,5 +1,5 @@
 import qrcode
-
+import os
 
 def generate_qr_code(data, filename):
     qr = qrcode.QRCode(
@@ -10,6 +10,7 @@ def generate_qr_code(data, filename):
     qr.add_data(data)
     qr.make(fit=True)
     image = qr.make_image(fill_color="black", back_color="white")
+    os.makedirs('qrcodes', exist_ok=True)
     image.save(f'qrcodes/{filename}.png')
 
 
